@@ -9,11 +9,11 @@ def userInput():
     userChoice = userChoice.upper()
 
     while True:
-        if (userChoice == "ENCODE"):
+        if (userChoice == "ENCODE" or userChoice == "E"):
             userMessage = input("Enter a message to encode: ")
             break
 
-        elif (userChoice == "DECODE"):
+        elif (userChoice == "DECODE" or userChoice == "D"):
             userMessage = input("Enter a message to decode: ")
             break
 
@@ -30,20 +30,20 @@ try:
     while (running == True):
         userChoice, userMessage = userInput()
 
-        if (userChoice == "ENCODE"):
+        if (userChoice == "ENCODE" or userChoice == "E"):
             print ("\n" + "Encode: " + userMessage + "\n")
 
-        elif (userChoice == "DECODE"):
+        elif (userChoice == "DECODE" or userChoice == "D"):
             print ("\n" + "Decode: " + userMessage + "\n")
 
         restartApplication = input("Would you like to restart the application? ")
         restartApplication = restartApplication.upper()
 
         while True:
-            if (restartApplication == "YES"):
+            if (restartApplication == "YES" or restartApplication == "Y"):
                 break
 
-            elif (restartApplication == "NO"):
+            elif (restartApplication == "NO" or restartApplication == "N"):
                 running = False
                 break
 
